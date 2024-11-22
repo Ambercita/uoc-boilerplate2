@@ -1,0 +1,138 @@
+body {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0;
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  i {
+    padding-right: 0.25rem;
+  }
+}
+
+@function mostrar($radius, $x, $y) {
+  @return circle(#{$radius} at #{$x} #{$y});
+}
+
+@mixin img {
+  max-width: 100%;
+  height: auto;
+}
+
+article {
+  margin: 0 2rem;
+  text-align: center;
+
+  figure:nth-of-type(1) img {
+    @include img;
+    clip-path: mostrar(25%, 45%, 25%);
+    transition: clip-path 3s;
+
+    &:hover {
+      clip-path: mostrar(80%, 100%, 30%);
+    }
+  }
+
+  figure:nth-of-type(2) img {
+    @include img;
+    clip-path: mostrar(15%, 50%, 35%);
+    transition: clip-path 3s;
+
+    &:hover {
+      clip-path: mostrar(60%, 40%, 80%);
+    }
+  }
+
+  figure:nth-of-type(3) img {
+    @include img;
+    clip-path: mostrar(50%, 10%, 25%);
+    transition: clip-path 3s;
+
+    &:hover {
+      clip-path: mostrar(60%, 40%, 80%);
+    }
+  }
+
+  figure:nth-of-type(4) img {
+    @include img;
+    clip-path: mostrar(20%, 60%, 25%);
+    transition: clip-path 3s;
+
+    &:hover {
+      clip-path: mostrar(60%, 40%, 80%);
+    }
+  }
+
+  figcaption {
+    font-size: 0.75rem;
+    color: $color-secondary;
+  }
+}
+main > header {
+  background-image: url(../images/caleta.jpg);
+  background-size: cover;
+  background-position-y: center;
+  height: 15rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  li {
+    list-style: none;
+  }
+}
+
+.nav__item {
+  color: $color-secondary;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+
+  &:hover {
+    color: $color-tertiary;
+  }
+
+  &:not(:last-child) {
+    border-right: 1.5px solid $color-primary;
+    margin-right: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  &--active {
+    color: $color-tertiary;
+    text-transform: uppercase;
+  }
+}
+
+.uoc-footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+}
