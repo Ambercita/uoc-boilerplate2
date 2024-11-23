@@ -10,3 +10,5 @@
  * Write any other JavaScript below
  */
 
+import * as bootstrap from 'bootstrap';
+
