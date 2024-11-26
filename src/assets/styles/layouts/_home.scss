@@ -1,35 +1,106 @@
 body {
-    font-family: "alata", sans-serif;
-    background-color: $color-background;
+  font-family: $font-text, sans-serif;
+  background-color: $color-background;
 }
 
 @keyframes shake {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(-5deg); }
-    75% { transform: rotate(5deg); }
-    100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@mixin img-redondido {
+  border-radius: 1rem;
 }
 
 header {
-    img {
-        border-radius: 1rem;
-        &:hover,
-        &:focus {
-            animation: shake 0.5s;
-        }
-    }
+  font-family: $font-menu, sans-serif;
 
-    .nav-link {
-        text-transform: uppercase;
-        &:hover,
-        &:focus {
-            color: $color-primary;
-        }
+  img {
+    @include img-redondido;
+    &:hover &:focus {
+      animation: shake 0.5s;
     }
+  }
 
-    i {
-        padding-right: .25rem;
+  .nav-link {
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+      color: $color-primary;
     }
+  }
 }
 
+i {
+  padding-right: 0.25rem;
+}
+
+footer {
+  form {
+    width: 60vw;
+    margin: 2rem auto;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-left: 2rem;
+
+    img {
+      @include img-redondido;
+    }
+  }
+
+  .nav {
+    font-family: $font-menu, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  .nav__item {
+    color: $color-quinary;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+
+    &:hover {
+      color: $color-secondary;
+    }
+
+    &:not(:last-child) {
+      padding-right: 0.8rem;
+    }
+  }
+
+  .rrss {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    li {
+      list-style: none;
+    }
+  }
+}
