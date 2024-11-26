@@ -1,27 +1,65 @@
-
 <header>
-    <a href="./index.html"
-        ><img
-            src="../src/assets/images/logo cadiz.png"
-            width="150"
-            height="150"
-            alt="logo cadiz"
-    /></a>
-    <nav>
-        <ul class="nav">
-            <li>
-                <a class="nav__item--active" href="index.html"
-                    ><span style="font-size: 1em; color: green;"><i class="fa-solid fa-tree"></i></span>Senderismo</a
-                >
-            </li>
-            <li>
-                <a class="nav__item" href=""><span style="font-size: 1em; color: black;"><i class="fa-solid fa-monument"></i></span>Monumentos</a>
-            </li>
-            <li>
-                <a class="nav__item" href=""><span style="font-size: 1em; color: brown;">
-                    <i class="fa-solid fa-coffee"></i>
-                  </span>Gastronomía</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img
+                    src="../src/assets/images/logo.jpg"
+                    alt="logo"
+                    width="50"
+                    height="50"
+                    href="./index.html"
+                />
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            aria-current="page"
+                            href="./index.html"
+                            ><span style="font-size: 1em; color: #d90429"
+                                ><i class="fa-solid fa-shield-cat"></i></span
+                            >inicio</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./participants.html"
+                            ><span style="font-size: 1em; color: #d90429"
+                                ><i class="fa-solid fa-users"></i></span
+                            >participantes</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./news.html"
+                            ><span style="font-size: 1em; color: #d90429"
+                                ><i
+                                    class="fa-solid fa-book-open-reader"
+                                ></i></span
+                            >noticias</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html"
+                            ><span style="font-size: 1em; color: #d90429"
+                                ><i
+                                    class="fa-solid fa-champagne-glasses"
+                                ></i></span
+                            >contacto</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>

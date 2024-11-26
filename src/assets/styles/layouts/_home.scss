@@ -2,3 +2,34 @@ body {
     font-family: "alata", sans-serif;
     background-color: $color-background;
 }
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+header {
+    img {
+        border-radius: 1rem;
+        &:hover,
+        &:focus {
+            animation: shake 0.5s;
+        }
+    }
+
+    .nav-link {
+        text-transform: uppercase;
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
+    }
+
+    i {
+        padding-right: .25rem;
+    }
+}
+
