@@ -325,3 +325,10 @@ section {
 }
 
 // NEWS STYLES
+
+$breadcrumb-divider: quote(">");
+
+.breadcrumb {
+  font-family: $font-menu, sans-serif;
+  margin-left: 1rem;
+}

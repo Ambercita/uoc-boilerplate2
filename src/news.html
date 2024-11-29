@@ -26,6 +26,17 @@
     </head>
     <body>
         <include src="./views/header.html"></include>
+        <nav
+            style="--bs-breadcrumb-divider: &quot;>&quot;"
+            aria-label="breadcrumb"
+        >
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Inico</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    Noticias
+                </li>
+            </ol>
+        </nav>
         <main>
             <article>
                 <h1>Descubre por qué la Ciberseguridad es Esencial Hoy</h1>
@@ -37,29 +48,111 @@
                     ciberseguridad? Se refiere al conjunto de prácticas,
                     tecnologías y procesos diseñados para defender sistemas
                     informáticos, redes y datos contra ataques, accesos no
-                    autorizados y daños. En otras palabras, la ciberseguridad es seguridad informática.
+                    autorizados y daños. En otras palabras, la ciberseguridad es
+                    seguridad informática.
                 </p>
                 <p>
                     La importancia de la ciberseguridad no puede ser
-                    subestimada. Además de la pérdida de datos
-                    sensibles, los ataques cibernéticos pueden afectar la
-                    reputación de las empresas, interrumpir servicios esenciales
-                    y, en casos extremos, poner en riesgo la seguridad nacional.
+                    subestimada. Además de la pérdida de datos sensibles, los
+                    ataques cibernéticos pueden afectar la reputación de las
+                    empresas, interrumpir servicios esenciales y, en casos
+                    extremos, poner en riesgo la seguridad nacional.
                 </p>
                 <blockquote>
-                    "la seguridad no es un producto, sino un proceso." -  Bruce Schneier
+                    "la seguridad no es un producto, sino un proceso." - Bruce
+                    Schneier
                 </blockquote>
                 <p>
                     Existen diversos tipos de ataques cibernéticos que pueden
                     comprometer la seguridad de cualquier sistema. A
                     continuación, se presenta una lista de los más comunes:
                 </p>
-                <ul>
-                    <li>Phishing: Intentos fraudulentos de obtener información sensible a través de correos electrónicos o sitios web falsos.</li>
-                    <li>Malware: Software malicioso diseñado para dañar o infiltrarse en sistemas informáticos.</li>
-                    <li>Ransomware: Tipo de malware que cifra los datos de la víctima y exige un rescate para su liberación.</li>
-                    <li>Ataques de Denegación de Servicio (DDoS): Inundar un servidor con tráfico para sobrecargarlo y hacerlo inaccesible.</li>
-                </ul>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne"
+                                aria-expanded="true"
+                                aria-controls="collapseOne"
+                            >
+                                Phishing
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseOne"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                El phishing es una técnica de engaño que utiliza
+                                correos electrónicos o sitios web falsos para
+                                robar información personal, como contraseñas y
+                                datos bancarios. Los atacantes se hacen pasar
+                                por entidades confiables para inducir a los
+                                usuarios a revelar sus datos sensibles.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="collapseTwo"
+                            >
+                                Ataques de Denegación de Servicio (DDoS)
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseTwo"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                Los ataques DDoS sobrecargan servidores o redes
+                                con un flujo masivo de tráfico, haciendo que los
+                                servicios sean inaccesibles para los usuarios
+                                legítimos. Estos ataques pueden interrumpir
+                                operaciones empresariales y causar pérdidas
+                                económicas significativas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree"
+                                aria-expanded="false"
+                                aria-controls="collapseThree"
+                            >
+                                Ransomware
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseThree"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                El ransomware es un tipo de malware que cifra
+                                los archivos de la víctima, bloqueando el acceso
+                                hasta que se pague un rescate. Este ataque puede
+                                afectar tanto a individuos como a
+                                organizaciones, resultando en la pérdida de
+                                datos críticos y daños financieros.
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <p>
                     Para mitigar los riesgos asociados con las amenazas
                     cibernéticas, es crucial adoptar mejores prácticas en
@@ -88,7 +181,12 @@
                         identidad del usuario.
                     </dd>
                 </dl>
-                <p>Al adoptar una postura proactiva y mantenerse informado sobre las últimas tendencias en ciberseguridad, podemos construir un entorno digital más seguro y resiliente para todos.</p>
+                <p>
+                    Al adoptar una postura proactiva y mantenerse informado
+                    sobre las últimas tendencias en ciberseguridad, podemos
+                    construir un entorno digital más seguro y resiliente para
+                    todos.
+                </p>
             </article>
         </main>
         <include src="./views/footer.html"></include>
