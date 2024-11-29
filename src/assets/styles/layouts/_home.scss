@@ -216,6 +216,7 @@ hr {
       z-index: 2;
       padding-left: 0.25em;
       margin-bottom: initial;
+      font-weight: bolder;
     }
 
     .landing__subtitle {
@@ -229,9 +230,10 @@ hr {
     hr {
       grid-column: 5 / 6;
       grid-row: 2;
-      height: 6px;
+      height: 3px;
       background-color: $color-quinary;
       width: 20ch;
+      border: 1px double $color-secondary;
     }
 
     .landing__content {
@@ -291,3 +293,33 @@ hr {
 }
 
 
+// PARTICIPANTES STYLES
+section {
+  margin: 4rem;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3em;
+}
+
+.gallery__title {
+  font-family: $font-title;
+  color: $color-secondary;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1em;
+}
+
+.gallery__item {
+  img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    @include img-redondido;
+    margin-bottom: 1.5em;
+  }
+}
