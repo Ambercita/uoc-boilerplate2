@@ -1,6 +1,10 @@
 //ESTILO GLOBAL
 @use "sass:color";
 
+@function tint-color($color, $weight) {
+  @return color.mix(white, $color, $weight);
+}
+
 html {
   box-sizing: border-box;
   height: 100dvh;
@@ -168,7 +172,7 @@ footer {
 .landing__subtitle {
   text-transform: uppercase;
   font-size: calc(0.8em + 0.5vw);
-  color: color.adjust($color-quaternary, $lightness: 50%);
+  color: tint-color($color-quaternary, 50);
   margin: 1em 0 1em 0;
 }
 
@@ -200,6 +204,7 @@ hr {
   text-transform: uppercase;
   line-height: 1.5;
   font-weight: bold;
+  color: tint-color($color-quinary, 20);
 }
 
 .landing__button {
@@ -242,7 +247,7 @@ hr {
       grid-column: 6 / 7;
       writing-mode: vertical-rl;
       margin-bottom: initial;
-      color: $color-quaternary;
+      color: tint-color($color-quaternary, 50);
     }
 
     hr {
@@ -291,6 +296,7 @@ hr {
       background: $white;
       text-align: center;
       display: flex;
+      color: tint-color($color-quinary, 20);
 
       p {
         margin: auto;
