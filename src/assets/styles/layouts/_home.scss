@@ -1,4 +1,5 @@
 //ESTILO GLOBAL
+@use "sass:color";
 
 html {
   box-sizing: border-box;
@@ -47,6 +48,20 @@ body {
   }
 }
 
+@mixin img-destacado {
+  border: 1px solid $color-secondary;
+  border-radius: 1rem;
+  box-shadow: 0 0 3px $color-quaternary;
+  transition:
+    transform 0.5s,
+    box-shadow 0.5s;
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px $color-quaternary;
+  }
+}
+
 // HEADER STYLES
 
 header {
@@ -54,6 +69,10 @@ header {
 
   img {
     @include img-redondido;
+  }
+
+  .nav-item.active .nav-link {
+    color: $color-primary;
   }
 
   .nav-link {
@@ -107,7 +126,8 @@ footer {
     list-style: none;
     display: flex;
 
-    &:hover {
+    &:hover,
+    &.active {
       color: $color-secondary;
     }
 
@@ -148,7 +168,7 @@ footer {
 .landing__subtitle {
   text-transform: uppercase;
   font-size: calc(0.8em + 0.5vw);
-  color: lighten($color-quaternary, 50%);
+  color: color.adjust($color-quaternary, $lightness: 50%);
   margin: 1em 0 1em 0;
 }
 
@@ -195,7 +215,6 @@ hr {
   text-decoration: none;
 }
 
-
 // CSS GRID LAYOUT POSTER
 @supports (display: grid) {
   @media (min-width: 42em) and (min-height: 27em) {
@@ -203,11 +222,10 @@ hr {
       max-width: none;
       padding: 0;
       display: grid;
-      grid-template-columns: 2fr minmax(10em, max-content) minmax(
-          14em,
-          max-content
-        ) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
-      grid-template-rows: 35vh 40vh 15vh 10vh;
+      grid-template-columns:
+        2fr minmax(10em, max-content) minmax(14em, max-content)
+        minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
+      grid-template-rows: 35vh 40vh 15vh 3.5rem;
     }
 
     .landing__title {
@@ -263,6 +281,7 @@ hr {
     .landing__image {
       grid-column: 1 / 4;
       grid-row: 1 / 4;
+      object-position: -100px 0px;
     }
 
     .landing__location {
@@ -292,7 +311,6 @@ hr {
   }
 }
 
-
 // PARTICIPANTES STYLES
 section {
   margin: 4rem;
@@ -319,15 +337,13 @@ section {
     width: 100%;
     height: 500px;
     object-fit: cover;
-    @include img-redondido;
+    @include img-destacado;
     margin-bottom: 1.5em;
   }
 }
 
 // NEWS STYLES
 
-$breadcrumb-divider: quote(">");
- 
 @mixin blog-img {
   max-width: 100%;
   object-fit: cover;
@@ -358,7 +374,7 @@ article {
     height: 500px;
     @include blog-img;
   }
-  
+
   img {
     display: block;
     height: auto;
