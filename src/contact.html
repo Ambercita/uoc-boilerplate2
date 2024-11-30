@@ -24,7 +24,26 @@
     <body>
         <include src="./views/header.html"></include>
         <main>
-vsvfdvdvdvfdddv
+          <h1>Estamos aquí para ayudarte.</h1>
+          <form>
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre y Apellidos">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@dominio.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Asunto</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Aceptar <a href="#">términos y condiciones</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
         </main>
         <include src="./views/footer.html"></include>
         <script type="module" src="./assets/scripts/main.js"></script>

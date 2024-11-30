@@ -332,6 +332,7 @@ $breadcrumb-divider: quote(">");
   max-width: 100%;
   object-fit: cover;
   margin: 1em auto;
+  border-radius: 2rem;
 }
 
 .breadcrumb {
@@ -340,7 +341,8 @@ $breadcrumb-divider: quote(">");
 }
 
 article {
-  margin: auto 3rem;
+  margin: auto;
+  width: 85vw;
   text-align: left;
   line-height: 1.5;
 
@@ -368,4 +370,31 @@ article {
     text-align: center;
     color: $color-quaternary;
   }
+
+  blockquote {
+    font-style: italic;
+    color: $color-quaternary;
+    border-left: 1px solid $color-secondary;
+    margin-left: 2em;
+    padding-left: 1em;
+  }
+}
+
+// FORM STYLES
+
+h1 {
+  font-family: $font-title;
+  color: $color-secondary;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem auto;
+  width: 80vw;
 }
