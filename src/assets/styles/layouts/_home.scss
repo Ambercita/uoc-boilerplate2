@@ -1,22 +1,27 @@
 //ESTILO GLOBAL
 @use "sass:color";
 
+@layer components, utilities;
+
 @function tint-color($color, $weight) {
   @return color.mix(white, $color, $weight);
 }
 
-html {
-  box-sizing: border-box;
-  height: 100dvh;
+@layer utilities {
+  html {
+    box-sizing: border-box;
+    height: 100dvh;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
 
 body {
   font-family: $font-text, sans-serif;
@@ -218,6 +223,7 @@ hr {
 }
 
 // CSS GRID LAYOUT POSTER
+
 @supports (display: grid) {
   @media (min-width: 42em) and (min-height: 27em) {
     .landing {
@@ -413,18 +419,18 @@ h1 {
   margin: 1rem 0;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  margin: 3rem auto;
-  width: 80dvw;
-}
+@layer component {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem auto;
+    width: 80dvw;
+  }  
 
-// SUBSCRIBE FORM STYLES (HE PUESTO EL FORMULARIO EN LA PAGINA DE ARTICULO)
-
-form:has(.form-text) {
-  width: 60dvw;
-  margin: 2rem auto;
+  form:has(.form-text) {
+    width: 60dvw;
+    margin: 2rem auto;
+  }
 }
