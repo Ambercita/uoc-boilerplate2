@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  container-type: inline-size;
 }
 
 // ANIMATIONS OF LOGO AND MIXINS
@@ -92,7 +93,6 @@ i {
   padding-right: 0.25rem;
 }
 
-
 //FOOTER STYLES
 
 footer {
@@ -149,6 +149,7 @@ footer {
 }
 
 // HOME STYLES
+
 
 .landing {
   max-width: 45em;
@@ -215,7 +216,6 @@ footer {
 hr {
   opacity: 0;
 }
-
 
 // CSS GRID LAYOUT POSTER
 @supports (display: grid) {
@@ -325,23 +325,23 @@ section {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 3em;
-}
 
-.gallery__title {
-  font-family: $font-title;
-  color: $color-secondary;
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 1em;
-}
+  &__title {
+    font-family: $font-title;
+    color: $color-secondary;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1em;
+  }
 
-.gallery__item {
-  img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    @include img-destacado;
-    margin-bottom: 1.5em;
+  &__item {
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      @include img-destacado;
+      margin-bottom: 1.5em;
+    }
   }
 }
 
@@ -428,5 +428,3 @@ form:has(.form-text) {
   width: 60dvw;
   margin: 2rem auto;
 }
-
-
