@@ -218,6 +218,7 @@ hr {
   opacity: 0;
 }
 
+
 // CSS GRID LAYOUT POSTER
 
 @supports (display: grid) {
@@ -316,11 +317,12 @@ hr {
   }
 }
 
+
 // PARTICIPANTES STYLES
 section {
   margin: 4rem;
 }
-/*
+
 .container__gallery {
   container-type: inline-size;
   container-name: container__gallery;
@@ -333,7 +335,7 @@ section {
    text-align: center;
   }
 }
-  */
+  
 
 .gallery {
   display: flex;
@@ -418,7 +420,7 @@ article {
     color: tint-color($color-secondary, 10);
   }
 }
-/*
+
 .container__news {
   container-type: inline-size;
 }
@@ -429,7 +431,7 @@ article {
     margin: 2rem auto;
   }
 }
-*/
+
 // CONTACT FORM STYLES
 
 h1 {
@@ -439,7 +441,7 @@ h1 {
   text-align: center;
   margin: 1rem 0;
 }
-/*
+
 .container__form {
   container-type: inline-size;
   container-name: container__form;
@@ -450,7 +452,7 @@ h1 {
     font-size: 1.2rem;
   }
 } 
-  */
+  
 
 @layer component {
   form {
