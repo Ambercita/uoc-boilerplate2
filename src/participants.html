@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="es">
     <head>
@@ -16,44 +16,91 @@
             href="../src/assets/images/favicon.ico"
         />
         <!-- do not remove this line! -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400..700;1,400..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400..700;1,400..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+            rel="stylesheet"
+        />
         <title>Participantes de conferencia</title>
     </head>
     <body>
         <include src="./views/header.html"></include>
         <main>
-        <section>
-            <h1 class="gallery__title">Participantes</h1>
-            <div class="gallery">
-            <figure class="gallery__item">
-                <img src="./assets/images/speaker1.jpg" width="960" height="1440" alt="foto de la especialista" />
-                <figcaption>Ana Duran - Especialista en protección de datos
-                </figcaption>
-            </figure>
-            <figure class="gallery__item">
-                <img src="./assets/images/speaker2.jpg" width="1120" height="1680" alt="foto de la experta" />
-                <figcaption>Alicia Fernandez - Experta en ingeniería social</figcaption>
-            </figure>
-            <figure class="gallery__item">
-                <img src="./assets/images/speaker3.jpg" width="497" height="750" alt="foto de la analista" />
-                <figcaption>Gary G. Moreno - Analista de inteligencia de amenazas</figcaption>
-            </figure>
-            <figure class="gallery__item">
-                <img src="./assets/images/speaker4.jpg" width="1000" height="1500" alt="foto del consultor" />
-                <figcaption>Jack Bueno - Consultor en ciberseguridad</figcaption>
-            </figure>
-            <figure class="gallery__item">
-                <img src="./assets/images/speaker5.jpg" width="912" height="1368" alt="foto de la formadora" />
-                <figcaption>Carmen Muñoz- Formadora de ciberseguridad</figcaption>
-            </figure>
-            <figure class="gallery__item">
-                <img src="./assets/images/speaker7.jpg" width="816" height="1125" alt="foto del investigador" />
-                <figcaption>Julio Leon - Investigador en ciberseguridad</figcaption>
-            </figure>
-            </div>
-        </section>
+            <section>
+                <div class="container__gallery">
+                    <h1 class="gallery__title">Participantes</h1>
+                    <div class="gallery">
+                        <figure class="gallery__item">
+                            <img
+                                src="./assets/images/speaker1.jpg"
+                                width="960"
+                                height="1440"
+                                alt="foto de la especialista"
+                            />
+                            <figcaption>
+                                Ana Duran - Especialista en protección de datos
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery__item">
+                            <img
+                                src="./assets/images/speaker2.jpg"
+                                width="1120"
+                                height="1680"
+                                alt="foto de la experta"
+                            />
+                            <figcaption>
+                                Alicia Fernandez - Experta en ingeniería social
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery__item">
+                            <img
+                                src="./assets/images/speaker3.jpg"
+                                width="497"
+                                height="750"
+                                alt="foto de la analista"
+                            />
+                            <figcaption>
+                                Gary G. Moreno - Analista de inteligencia de
+                                amenazas
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery__item">
+                            <img
+                                src="./assets/images/speaker4.jpg"
+                                width="1000"
+                                height="1500"
+                                alt="foto del consultor"
+                            />
+                            <figcaption>
+                                Jack Bueno - Consultor en ciberseguridad
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery__item">
+                            <img
+                                src="./assets/images/speaker5.jpg"
+                                width="912"
+                                height="1368"
+                                alt="foto de la formadora"
+                            />
+                            <figcaption>
+                                Carmen Muñoz- Formadora de ciberseguridad
+                            </figcaption>
+                        </figure>
+                        <figure class="gallery__item">
+                            <img
+                                src="./assets/images/speaker7.jpg"
+                                width="816"
+                                height="1125"
+                                alt="foto del investigador"
+                            />
+                            <figcaption>
+                                Julio Leon - Investigador en ciberseguridad
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
         </main>
         <include src="./views/footer.html"></include>
         <script type="module" src="./assets/scripts/main.js"></script>

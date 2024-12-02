@@ -22,13 +22,11 @@
   }
 }
 
-
 body {
   font-family: $font-text, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  container-type: inline-size;
 }
 
 // ANIMATIONS OF LOGO AND MIXINS
@@ -154,8 +152,6 @@ footer {
 }
 
 // HOME STYLES
-
-
 .landing {
   max-width: 45em;
   margin: 0 auto;
@@ -324,6 +320,20 @@ hr {
 section {
   margin: 4rem;
 }
+/*
+.container__gallery {
+  container-type: inline-size;
+  container-name: container__gallery;
+}
+
+@container container__gallery (max-width: 42em) {
+  figcaption {
+   font-size: 0.95rem;
+   font-family: $font-title;
+   text-align: center;
+  }
+}
+  */
 
 .gallery {
   display: flex;
@@ -408,7 +418,18 @@ article {
     color: tint-color($color-secondary, 10);
   }
 }
+/*
+.container__news {
+  container-type: inline-size;
+}
 
+@container (min-width: 42em) {
+  .accordion {
+    width: 80vw;
+    margin: 2rem auto;
+  }
+}
+*/
 // CONTACT FORM STYLES
 
 h1 {
@@ -418,6 +439,18 @@ h1 {
   text-align: center;
   margin: 1rem 0;
 }
+/*
+.container__form {
+  container-type: inline-size;
+  container-name: container__form;
+}
+
+@container container__form (max-width: 42em) {
+  h1 {
+    font-size: 1.2rem;
+  }
+} 
+  */
 
 @layer component {
   form {
@@ -434,3 +467,4 @@ h1 {
     margin: 2rem auto;
   }
 }
+
